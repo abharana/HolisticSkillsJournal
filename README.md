@@ -86,12 +86,12 @@ Front-end application has been built with Angular 9 and Angular Material. Applic
 
 **Left Navigation Options**: 
 
-* ** Capture a Skill**: This screen will be used by the user to capture his skill details that he plans to add to his skill journal. Once a skill has been added, a URL will be generated that can be used for broadcasting the Skill to certifiers.
-* ** Certify a users Skill**: This option will be opened by default if a Certifier clicks on the URL that was provided to him for approval. The certifier can capture additional details and give a rating based on a rubric with some comments.
-* ** List my Skills**: If a users skill has been certified, he will be able to view his skills and details about the rating he has received and the issuers name.
-* ** View Registered Users**: To be implemented
-* ** Sponsor a Skill Campaign**: To be implemented
-* ** Enroll into a Skill Campaign**: To be implemented
+**Capture a Skill**: This screen will be used by the user to capture his skill details that he plans to add to his skill journal. Once a skill has been added, a URL will be generated that can be used for broadcasting the Skill to certifiers.
+**Certify a users Skill**: This option will be opened by default if a Certifier clicks on the URL that was provided to him for approval. The certifier can capture additional details and give a rating based on a rubric with some comments.
+**List my Skill**: If a users skill has been certified, he will be able to view his skills and details about the rating he has received and the issuers name.
+**View Registered Users**: To be implemented
+**Sponsor a Skill Campaign**: To be implemented
+**Enroll into a Skill Campaign**: To be implemented
 
 #### Section 9: Future Improvements?
 * **1)** Implement Skill campaign related functionality within smart contracts and web application. 
