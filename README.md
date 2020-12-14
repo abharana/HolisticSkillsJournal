@@ -35,16 +35,16 @@ Front-end application has been built with Angular 9 and Angular Material. Applic
 * **3)** src/app : contains all the routing logic for components
 
 #### Section 4: Other documents:
-* **1: avoiding_common_attacks.md ** : How common security attacks have been avaoided in my implementation of Marketplace solidity smart contract
-* **2: design_pattern_decisions.md ** : Lists the various design patterns adopted in the smart contracts.
-* **3: deployed_addresses.txt**: Contains the addresses of deployed contracts and test accounts in Rinkeby test network.
+* **1)**: avoiding_common_attacks.md ** : How common security attacks have been avaoided in my implementation of Marketplace solidity smart contract
+* **2)**: design_pattern_decisions.md ** : Lists the various design patterns adopted in the smart contracts.
+* **3)**: deployed_addresses.txt**: Contains the addresses of deployed contracts and test accounts in Rinkeby test network.
 
 #### Section 5: Prerequisites:
-* **1** Install Ganache and metamask plug-in for browser.
-* **2** Generate a 12 word Nmnemonic that will be used to create HD Wallet addresses in Ganache
-* **3** Start Ganache on port 8545 with the 12 word mnemonic created.
-* **4** Connect metamask to Ganache server at http://localhost:8545
-* **5** Import the first 4 accounts from the HD wallet into Metamask (using private key import) and verify that the balance on metamask for the account is the same as that shown in ganache.
+* **1)** Install Ganache and metamask plug-in for browser.
+* **2)** Generate a 12 word Nmnemonic that will be used to create HD Wallet addresses in Ganache
+* **3)** Start Ganache on port 8545 with the 12 word mnemonic created.
+* **4)** Connect metamask to Ganache server at http://localhost:8545
+* **5)** Import the first 4 accounts from the HD wallet into Metamask (using private key import) and verify that the balance on metamask for the account is the same as that shown in ganache.
 
 #### Section 7: How to set it up locally?
 **Step 1:** Clone the repo to local machine:
@@ -84,7 +84,8 @@ Front-end application has been built with Angular 9 and Angular Material. Applic
 * **Owner Details**: This would show the account from which contract was deployed. It defaults to first account in ganache.
 * **Register Account**: All metamask accounts will be registered to use the Dapp with a Name using the Register Account button. If the account has been previously registered it will display the registered name.
 
-* **Left Navigation Options**: 
+**Left Navigation Options**: 
+
 * ** Capture a Skill**: This screen will be used by the user to capture his skill details that he plans to add to his skill journal. Once a skill has been added, a URL will be generated that can be used for broadcasting the Skill to certifiers.
 * ** Certify a users Skill**: This option will be opened by default if a Certifier clicks on the URL that was provided to him for approval. The certifier can capture additional details and give a rating based on a rubric with some comments.
 * ** List my Skills**: If a users skill has been certified, he will be able to view his skills and details about the rating he has received and the issuers name.
@@ -93,8 +94,8 @@ Front-end application has been built with Angular 9 and Angular Material. Applic
 * ** Enroll into a Skill Campaign**: To be implemented
 
 #### Section 9: Future Improvements?
-* **1** Implement Skill campaign related functionality within smart contracts and web application. 
-* **2** Implement Role Based Access Control (OpenZeppelin contracts) in smart contracts and web application.
-* **3** Implement Self Sovereign Identity (using uPort)
-* **4** Implement IPFS for storing user specific data and skill badges from campaigns
-* **5** Implement Gas Station Network (OpenZeppelin contracts) for cases where users are recoding skills without enrolling into campaigns.
+* **1)** Implement Skill campaign related functionality within smart contracts and web application. 
+* **2)** Implement Role Based Access Control (OpenZeppelin contracts) in smart contracts and web application.
+* **3)** Implement Self Sovereign Identity (using uPort)
+* **4)** Implement IPFS for storing user specific data and skill badges from campaigns
+* **5)** Implement Gas Station Network (OpenZeppelin contracts) for cases where users are recoding skills without enrolling into campaigns.
