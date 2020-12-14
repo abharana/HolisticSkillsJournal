@@ -1,0 +1,54 @@
+<form [formGroup]="createSkillForm" (ngSubmit)="onSubmit(createSkillForm.value)">
+    <div class="container">
+        <div class="skill-container">
+    <div class="simple-form-wrapper">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Create Skill</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div class="mdc-layout-grid">
+                <div class="mdc-layout-grid__inner">
+                    <div class="mdc-layout-grid__cell">
+                        <section>
+                            <mat-form-field>
+                                <input  formControlName="skillName" matInput placeholder="Skill Name" required>
+                            </mat-form-field>
+                        </section>
+                    </div>
+
+                    <div class="mdc-layout-grid__cell">
+                        <section>
+                            <mat-form-field appearance="fill">
+                                <mat-label>SKill Category</mat-label>
+                                <mat-select formControlName="skillCategory" required>
+                                  <mat-option value="0">Creative</mat-option>
+                                  <mat-option value="1">Social</mat-option>
+                                  <mat-option value="2">Physical</mat-option>
+                                  <mat-option value="3">Cognitive</mat-option>
+                                  <mat-option value="4">Emotional</mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+        </mat-card-content>
+
+        <mat-card-actions align="end">
+            <button mat-flat-button color="primary">Submit</button>
+        </mat-card-actions>
+
+        <div *ngIf="skillUrl">
+            <span>Skill has been successfully created. Publish the URL to get the skill approved</span> <br/><br/>
+            <span>{{ skillUrl }} </span>
+        </div>
+
+    </mat-card>
+</div>
+</div>
+</div>
+</form>
+

@@ -1,0 +1,7 @@
+.skill-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .skill-container > * {
+    width: 70%;
+  }

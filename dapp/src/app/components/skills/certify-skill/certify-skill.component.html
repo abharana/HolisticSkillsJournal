@@ -1,0 +1,81 @@
+<form [formGroup]="certifySkillForm" (ngSubmit)="onSubmit(certifySkillForm.value)">
+    <div class="simple-form-wrapper">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Certify Skill</mat-card-title>
+            </mat-card-header>
+    
+            <mat-card-content>
+                <div class="mdc-layout-grid">
+                    <div class="mdc-layout-grid__inner">
+                        <div class="mdc-layout-grid__cell">
+                            <section>
+                                <mat-form-field>
+                                    <input  formControlName="userName" matInput placeholder="User Name">
+                                </mat-form-field>
+                            </section>
+                        </div>
+                        <div class="mdc-layout-grid__cell">
+                            <section>
+                                <mat-form-field>
+                                    <input  formControlName="skillName" matInput placeholder="Skill Name">
+                                </mat-form-field>
+                            </section>
+                        </div>
+    
+                        <div class="mdc-layout-grid__cell">
+                            <section>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>SKill Category</mat-label>
+                                    <mat-select formControlName="skillCategory">
+                                      <mat-option value="0">Creative</mat-option>
+                                      <mat-option value="1">Social</mat-option>
+                                      <mat-option value="2">Physical</mat-option>
+                                      <mat-option value="3">Cognitive</mat-option>
+                                      <mat-option value="4">Emotional</mat-option>
+                                    </mat-select>
+                                  </mat-form-field>
+                            </section>
+                        </div>
+                        
+                        <div class="mdc-layout-grid__cell">
+                            <section>
+                                <mat-form-field>
+                                    <input  formControlName="rating" matInput placeholder="Skill Rating">
+                                </mat-form-field>
+                            </section>
+                        </div>
+
+                        <div class="mdc-layout-grid__cell">
+                            <section>
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Leave a comment</mat-label>
+                                    <textarea matInput placeholder=""></textarea>
+                                  </mat-form-field>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="showMsg">
+                    <div class="col-xs-12">
+                      <p class="alert alert-success">
+                          <strong>Skill has been certified!</strong>
+                      </p>
+                    </div>
+                </div>
+    
+            </mat-card-content>
+    
+            <mat-card-actions align="end">
+                <button mat-flat-button color="primary">Certify Skill</button>
+            </mat-card-actions>
+    
+            <div *ngIf="skillUrl">
+                <span>Skill has been successfully created. Publish the URL to get the skill approved</span> <br/><br/>
+                <span>{{ skillUrl }} </span>
+            </div>
+    
+        </mat-card>
+    </div>
+    </form>

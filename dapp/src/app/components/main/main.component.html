@@ -1,0 +1,43 @@
+<mat-toolbar color='accent'>
+    <mat-toolbar-row >
+      <button mat-icon-button>
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+      </button>
+      <span class="example-spacer"></span>
+      <span><h1>Holistic Skills Journal</h1></span>
+    </mat-toolbar-row>
+
+  </mat-toolbar>
+
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav>
+      <mat-nav-list>
+  
+        <a mat-list-item [routerLink]="'/users'"> View Registered Users </a>
+        <a mat-list-item [routerLink]="'/viewSkills'"> List my Skills </a>
+        <a mat-list-item [routerLink]="'/createSkill'"> Capture a new Skill </a>
+        <a mat-list-item [routerLink]="'/certifySkill'"> Certify a users Skill </a>
+        <a mat-list-item [routerLink]="'/enrollSkillCampaign'"> Enroll into a Skill Campaign </a>
+        <a mat-list-item [routerLink]="'/sponsorSkillCampaign'"> Sponsor a Skill Campaign </a>
+        <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+  
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <span style="font-size: 75%; text-align: left;">
+          <b>Address</b> : {{user.address}} <br/>
+          <b>Balance</b> : {{user.balance}} ETH <br/>
+          <span *ngIf="user.name" >
+            <b>Name</b> : {{user.name}}
+          </span>
+        </span>
+
+      <span *ngIf="!user.name"> 
+        <a mat-flat-button color="primary" (click)="openDialog()"> Register Account </a>
+      </span>
+      
+      <div style="height: 88vh;">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

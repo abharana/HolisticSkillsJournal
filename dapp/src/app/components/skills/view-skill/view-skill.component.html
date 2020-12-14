@@ -1,0 +1,32 @@
+<mat-card-header>
+    <mat-card-title>View Skills</mat-card-title>
+</mat-card-header>
+<mat-tab-group mat-align-tabs="start">
+    <mat-tab label="Skills">
+        <mat-accordion
+        [multi]="true"
+        #accordion="matAccordion"
+        >
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false"
+                                 *ngFor="let panel of userSkills.skills">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <b>Skill: {{panel.name}}</b>
+                </mat-panel-title>
+                <mat-panel-description>
+                    <b> Category : </b> {{ panel.category}}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <b> Rating : </b> {{ panel.rating}}
+              <br/>
+              <b> State : </b> {{ panel.state}}
+              <br/>
+              <b> Certified By : </b>
+              <div *ngFor="let issuer of panel.skillIssuers">
+                {{ issuer }}
+              </div>
+            </mat-expansion-panel>
+          </mat-accordion>
+    </mat-tab>
+</mat-tab-group>
